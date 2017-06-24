@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C7D26F5036B1F61E6A9E966 /* Pods_LBTATwitterTutorialTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8829503CE2CACD928770382B /* Pods_LBTATwitterTutorialTests.framework */; };
 		8F4AACA31EFE91EF0036A526 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4AACA21EFE91EF0036A526 /* AppDelegate.swift */; };
 		8F4AACAA1EFE91EF0036A526 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F4AACA91EFE91EF0036A526 /* Assets.xcassets */; };
 		8F4AACAD1EFE91EF0036A526 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F4AACAB1EFE91EF0036A526 /* LaunchScreen.storyboard */; };
 		8F4AACB81EFE91EF0036A526 /* LBTATwitterTutorialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4AACB71EFE91EF0036A526 /* LBTATwitterTutorialTests.swift */; };
 		8F4AACC51EFE92F60036A526 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 8F4AACC41EFE92F60036A526 /* README.md */; };
 		8F9996FD1EFEAE7100FFAF8E /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9996FC1EFEAE7100FFAF8E /* HomeController.swift */; };
+		A9A3EDE89598A3096996F9FD /* Pods_LBTATwitterTutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FC33596DB5356F54BF41B4 /* Pods_LBTATwitterTutorial.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6F6B8C7FEBA5EEF8448D05FC /* Pods-LBTATwitterTutorial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LBTATwitterTutorial.release.xcconfig"; path = "Pods/Target Support Files/Pods-LBTATwitterTutorial/Pods-LBTATwitterTutorial.release.xcconfig"; sourceTree = "<group>"; };
+		8829503CE2CACD928770382B /* Pods_LBTATwitterTutorialTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LBTATwitterTutorialTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F4AAC9F1EFE91EF0036A526 /* LBTATwitterTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LBTATwitterTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F4AACA21EFE91EF0036A526 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F4AACA91EFE91EF0036A526 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -36,6 +40,10 @@
 		8F4AACB91EFE91EF0036A526 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F4AACC41EFE92F60036A526 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8F9996FC1EFEAE7100FFAF8E /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		D35493C72DFE1770E6E9C08E /* Pods-LBTATwitterTutorial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LBTATwitterTutorial.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LBTATwitterTutorial/Pods-LBTATwitterTutorial.debug.xcconfig"; sourceTree = "<group>"; };
+		D4FC33596DB5356F54BF41B4 /* Pods_LBTATwitterTutorial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LBTATwitterTutorial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF33834015FB616CB86EB63C /* Pods-LBTATwitterTutorialTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LBTATwitterTutorialTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LBTATwitterTutorialTests/Pods-LBTATwitterTutorialTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F0F4810521DBCC195FC731D1 /* Pods-LBTATwitterTutorialTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LBTATwitterTutorialTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LBTATwitterTutorialTests/Pods-LBTATwitterTutorialTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9A3EDE89598A3096996F9FD /* Pods_LBTATwitterTutorial.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C7D26F5036B1F61E6A9E966 /* Pods_LBTATwitterTutorialTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +73,8 @@
 				8F4AACA11EFE91EF0036A526 /* LBTATwitterTutorial */,
 				8F4AACB61EFE91EF0036A526 /* LBTATwitterTutorialTests */,
 				8F4AACA01EFE91EF0036A526 /* Products */,
+				D3B8154490CCD519FA6BCBBA /* Pods */,
+				E151CAB084D47AC1EB520A6D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +108,26 @@
 			path = LBTATwitterTutorialTests;
 			sourceTree = "<group>";
 		};
+		D3B8154490CCD519FA6BCBBA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D35493C72DFE1770E6E9C08E /* Pods-LBTATwitterTutorial.debug.xcconfig */,
+				6F6B8C7FEBA5EEF8448D05FC /* Pods-LBTATwitterTutorial.release.xcconfig */,
+				EF33834015FB616CB86EB63C /* Pods-LBTATwitterTutorialTests.debug.xcconfig */,
+				F0F4810521DBCC195FC731D1 /* Pods-LBTATwitterTutorialTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E151CAB084D47AC1EB520A6D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D4FC33596DB5356F54BF41B4 /* Pods_LBTATwitterTutorial.framework */,
+				8829503CE2CACD928770382B /* Pods_LBTATwitterTutorialTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +135,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F4AACBC1EFE91EF0036A526 /* Build configuration list for PBXNativeTarget "LBTATwitterTutorial" */;
 			buildPhases = (
+				FCA0A2D28BB966C3FB80F237 /* [CP] Check Pods Manifest.lock */,
 				8F4AAC9B1EFE91EF0036A526 /* Sources */,
 				8F4AAC9C1EFE91EF0036A526 /* Frameworks */,
 				8F4AAC9D1EFE91EF0036A526 /* Resources */,
+				9C7FF6F260052994A48BD223 /* [CP] Embed Pods Frameworks */,
+				04ABB74EA1DF541E85F9677F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -120,9 +155,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F4AACBF1EFE91EF0036A526 /* Build configuration list for PBXNativeTarget "LBTATwitterTutorialTests" */;
 			buildPhases = (
+				3D911F6D2F631360701B5997 /* [CP] Check Pods Manifest.lock */,
 				8F4AACAF1EFE91EF0036A526 /* Sources */,
 				8F4AACB01EFE91EF0036A526 /* Frameworks */,
 				8F4AACB11EFE91EF0036A526 /* Resources */,
+				59A1BEFB472E783E6FE86DD5 /* [CP] Embed Pods Frameworks */,
+				EC3B799637F233195052C230 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -194,6 +232,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04ABB74EA1DF541E85F9677F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LBTATwitterTutorial/Pods-LBTATwitterTutorial-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3D911F6D2F631360701B5997 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		59A1BEFB472E783E6FE86DD5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LBTATwitterTutorialTests/Pods-LBTATwitterTutorialTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C7FF6F260052994A48BD223 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LBTATwitterTutorial/Pods-LBTATwitterTutorial-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC3B799637F233195052C230 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LBTATwitterTutorialTests/Pods-LBTATwitterTutorialTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FCA0A2D28BB966C3FB80F237 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8F4AAC9B1EFE91EF0036A526 /* Sources */ = {
@@ -331,6 +462,7 @@
 		};
 		8F4AACBD1EFE91EF0036A526 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D35493C72DFE1770E6E9C08E /* Pods-LBTATwitterTutorial.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DZRUU2Q993;
@@ -344,6 +476,7 @@
 		};
 		8F4AACBE1EFE91EF0036A526 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F6B8C7FEBA5EEF8448D05FC /* Pods-LBTATwitterTutorial.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DZRUU2Q993;
@@ -357,6 +490,7 @@
 		};
 		8F4AACC01EFE91EF0036A526 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF33834015FB616CB86EB63C /* Pods-LBTATwitterTutorialTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -372,6 +506,7 @@
 		};
 		8F4AACC11EFE91EF0036A526 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0F4810521DBCC195FC731D1 /* Pods-LBTATwitterTutorialTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
