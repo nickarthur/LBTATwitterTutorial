@@ -8,12 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		8F4AACA31EFE91EF0036A526 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4AACA21EFE91EF0036A526 /* AppDelegate.swift */; };
-		8F4AACA51EFE91EF0036A526 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4AACA41EFE91EF0036A526 /* ViewController.swift */; };
-		8F4AACA81EFE91EF0036A526 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F4AACA61EFE91EF0036A526 /* Main.storyboard */; };
 		8F4AACAA1EFE91EF0036A526 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F4AACA91EFE91EF0036A526 /* Assets.xcassets */; };
 		8F4AACAD1EFE91EF0036A526 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F4AACAB1EFE91EF0036A526 /* LaunchScreen.storyboard */; };
 		8F4AACB81EFE91EF0036A526 /* LBTATwitterTutorialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4AACB71EFE91EF0036A526 /* LBTATwitterTutorialTests.swift */; };
 		8F4AACC51EFE92F60036A526 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 8F4AACC41EFE92F60036A526 /* README.md */; };
+		8F9996FD1EFEAE7100FFAF8E /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9996FC1EFEAE7100FFAF8E /* HomeController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,8 +28,6 @@
 /* Begin PBXFileReference section */
 		8F4AAC9F1EFE91EF0036A526 /* LBTATwitterTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LBTATwitterTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F4AACA21EFE91EF0036A526 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8F4AACA41EFE91EF0036A526 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8F4AACA71EFE91EF0036A526 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8F4AACA91EFE91EF0036A526 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F4AACAC1EFE91EF0036A526 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F4AACAE1EFE91EF0036A526 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -38,6 +35,7 @@
 		8F4AACB71EFE91EF0036A526 /* LBTATwitterTutorialTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBTATwitterTutorialTests.swift; sourceTree = "<group>"; };
 		8F4AACB91EFE91EF0036A526 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F4AACC41EFE92F60036A526 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8F9996FC1EFEAE7100FFAF8E /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,8 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				8F4AACA21EFE91EF0036A526 /* AppDelegate.swift */,
-				8F4AACA41EFE91EF0036A526 /* ViewController.swift */,
-				8F4AACA61EFE91EF0036A526 /* Main.storyboard */,
+				8F9996FC1EFEAE7100FFAF8E /* HomeController.swift */,
 				8F4AACA91EFE91EF0036A526 /* Assets.xcassets */,
 				8F4AACAB1EFE91EF0036A526 /* LaunchScreen.storyboard */,
 				8F4AACAE1EFE91EF0036A526 /* Info.plist */,
@@ -186,7 +183,6 @@
 			files = (
 				8F4AACAD1EFE91EF0036A526 /* LaunchScreen.storyboard in Resources */,
 				8F4AACAA1EFE91EF0036A526 /* Assets.xcassets in Resources */,
-				8F4AACA81EFE91EF0036A526 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,8 +200,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F9996FD1EFEAE7100FFAF8E /* HomeController.swift in Sources */,
 				8F4AACC51EFE92F60036A526 /* README.md in Sources */,
-				8F4AACA51EFE91EF0036A526 /* ViewController.swift in Sources */,
 				8F4AACA31EFE91EF0036A526 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -229,14 +225,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8F4AACA61EFE91EF0036A526 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8F4AACA71EFE91EF0036A526 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8F4AACAB1EFE91EF0036A526 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -416,6 +404,7 @@
 				8F4AACBE1EFE91EF0036A526 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8F4AACBF1EFE91EF0036A526 /* Build configuration list for PBXNativeTarget "LBTATwitterTutorialTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +413,7 @@
 				8F4AACC11EFE91EF0036A526 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
