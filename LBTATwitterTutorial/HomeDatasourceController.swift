@@ -16,6 +16,10 @@ class HomeDatasourceController: DatasourceController {
         datasource = homeDatasource
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
     override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if let user = datasource?.item(indexPath) as? User {
             print(user.bioText)
