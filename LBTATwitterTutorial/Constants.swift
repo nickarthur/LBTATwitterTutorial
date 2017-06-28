@@ -10,6 +10,10 @@ import UIKit
 
 struct Constants {
     struct Metrics {
+        struct Home {
+            static let verticalSpacingSections: CGFloat = 14
+        }
+        
         struct UserCell {
             static let leftMargin: CGFloat = 12
             static let topMargin: CGFloat = 12
@@ -20,5 +24,10 @@ struct Constants {
             
             static let fontBioText = UIFont.systemFont(ofSize: 15)
         }
+    }
+    
+    struct Colors {
+        static let lightBlueBackground = UIColor(r: 232, g: 236, b: 241)
+        static let separatorLine = UIColor(r: 230, g: 230, b: 230)
     }
 }
