@@ -45,7 +45,7 @@ class UserCell: DatasourceCell {
     
     let bioTextView: UITextView = {
         let textView = UITextView()
-        textView.font = .systemFont(ofSize: 15)
+        textView.font = Constants.Metrics.UserCell.fontBioText
         textView.backgroundColor = .clear
         textView.isEditable = false
         return textView
@@ -77,11 +77,61 @@ class UserCell: DatasourceCell {
         addSubview(bioTextView)
         addSubview(followButton)
         
-        profileImageView.anchor(topAnchor, left: leftAnchor, bottom: nil, right: nil, topConstant: 12, leftConstant: 12, bottomConstant: 0, rightConstant: 0, widthConstant: 50, heightConstant: 50)
-        nameLabel.anchor(profileImageView.topAnchor, left: profileImageView.rightAnchor, bottom: nil, right: followButton.leftAnchor, topConstant: 0, leftConstant: 8, bottomConstant: 0, rightConstant: 12, widthConstant: 0, heightConstant: 20)
-        usernameLabel.anchor(nameLabel.bottomAnchor, left: nameLabel.leftAnchor, bottom: nil, right: nameLabel.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 20)
-        bioTextView.anchor(usernameLabel.bottomAnchor, left: usernameLabel.leftAnchor, bottom: bottomAnchor, right: rightAnchor, topConstant: -4, leftConstant: -4, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
-        followButton.anchor(topAnchor, left: nil, bottom: nil, right: rightAnchor, topConstant: 12, leftConstant: 0, bottomConstant: 0, rightConstant: 12, widthConstant: 120, heightConstant: 34)
+        let metrics = Constants.Metrics.UserCell.self
+        
+        profileImageView.anchor(topAnchor,
+                                left: leftAnchor,
+                                bottom: nil,
+                                right: nil,
+                                topConstant: metrics.topMargin,
+                                leftConstant: metrics.leftMargin,
+                                bottomConstant: 0,
+                                rightConstant: 0,
+                                widthConstant: metrics.userProfileImageSideLength,
+                                heightConstant: metrics.userProfileImageSideLength)
+        
+        nameLabel.anchor(profileImageView.topAnchor,
+                         left: profileImageView.rightAnchor,
+                         bottom: nil,
+                         right: followButton.leftAnchor,
+                         topConstant: 0,
+                         leftConstant: metrics.spacingProfileImageAndContent,
+                         bottomConstant: 0,
+                         rightConstant: 12,
+                         widthConstant: 0,
+                         heightConstant: metrics.heightNameLabel)
+        
+        usernameLabel.anchor(nameLabel.bottomAnchor,
+                             left: nameLabel.leftAnchor,
+                             bottom: nil,
+                             right: nameLabel.rightAnchor,
+                             topConstant: 0,
+                             leftConstant: 0,
+                             bottomConstant: 0,
+                             rightConstant: 0,
+                             widthConstant: 0,
+                             heightConstant: metrics.heightUsernameLabel)
+        
+        bioTextView.anchor(usernameLabel.bottomAnchor,
+                           left: usernameLabel.leftAnchor,
+                           bottom: bottomAnchor, right: rightAnchor,
+                           topConstant: -4,
+                           leftConstant: -4,
+                           bottomConstant: 0,
+                           rightConstant: 0,
+                           widthConstant: 0,
+                           heightConstant: 0)
+        
+        followButton.anchor(topAnchor,
+                            left: nil,
+                            bottom: nil,
+                            right: rightAnchor,
+                            topConstant: 12,
+                            leftConstant: 0,
+                            bottomConstant: 0,
+                            rightConstant: 12,
+                            widthConstant: 120,
+                            heightConstant: 34)
     }
 }
 

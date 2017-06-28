@@ -17,7 +17,24 @@ class HomeDatasourceController: DatasourceController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: 120)
+        if let user = datasource?.item(indexPath) as? User {
+            print(user.bioText)
+            
+            // Estimate height of cell using bioText height estimation
+            let cellMetrics = Constants.Metrics.UserCell.self
+            let attributes = [NSFontAttributeName: cellMetrics.fontBioText]
+            let approximateHeightTextView = view.frame.width - cellMetrics.userProfileImageSideLength - cellMetrics.leftMargin - cellMetrics.spacingProfileImageAndContent
+            let size = CGSize(width: approximateHeightTextView, height: 1000)
+            let estimatedFrame = NSString(string: user.bioText).boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: attributes, context: nil)
+            
+            let additionalHeightNecessary: CGFloat = 14
+            let cellHeight = cellMetrics.topMargin + cellMetrics.heightNameLabel + cellMetrics.heightUsernameLabel + estimatedFrame.height + additionalHeightNecessary
+            
+            return CGSize(width: view.frame.width, height: cellHeight)
+        }
+        
+        
+        return CGSize(width: view.frame.width, height: 200)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
