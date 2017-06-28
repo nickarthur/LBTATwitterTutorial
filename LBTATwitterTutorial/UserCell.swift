@@ -48,6 +48,7 @@ class UserCell: DatasourceCell {
         textView.font = Constants.Metrics.UserCell.fontBioText
         textView.backgroundColor = .clear
         textView.isEditable = false
+        textView.isScrollEnabled = false
         return textView
     }()
     
