@@ -24,6 +24,16 @@ extension HomeDatasourceController {
         
         navigationController?.navigationBar.backgroundColor = .white
         navigationController?.navigationBar.isTranslucent = false
+        
+        // Add a custom navigation bar separator
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        
+        let navBarSeparatorView = UIView()
+        navBarSeparatorView.backgroundColor = Constants.Colors.separatorLine
+        view.addSubview(navBarSeparatorView)
+        navBarSeparatorView.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0.5)
+        
     }
     
     private func setupLeftNavItem() {
