@@ -8,15 +8,29 @@
 
 import LBTAComponents
 import UIKit
+import TRON
+import SwiftyJSON
 
-class HomeDatasource: Datasource {
+class HomeDatasource: Datasource, JSONDecodable {
     
-    let users: [User] = {
-        let jackUser = User(name: "Jack Dorsey", username: "@jack", bioText: "Co-Founder & CEO of Twitter & Square. What will come next?", profileImage: #imageLiteral(resourceName: "jack_dorsey"))
-        let brianUser = User(name: "Brian Voong", username: "@buildthatapp", bioText: "iPhone, iPad, iOS Programming Community. Join us to learn Swift, Objective-C and build iOS apps!", profileImage: #imageLiteral(resourceName: "brian_voong"))
+    let users: [User]
+    
+    required init(json: JSON) throws {
+        var users = [User]()
         
-        return [jackUser, brianUser]
-    }()
+        let usersArray = json["users"].array
+        // TO DO: safely unwrap
+        for userJson in usersArray! {
+            let name = userJson["name"].stringValue
+            let username = userJson["username"].stringValue
+            let bio = userJson["bio"].stringValue
+            
+            let user = User(name: name, username: username, bioText: bio, profileImage: UIImage())
+            users.append(user)
+        }
+        
+        self.users = users
+    }
     
     let tweets: [Tweet] = {
         let brianUser = User(name: "Brian Voong", username: "@buildthatapp", bioText: "iPhone, iPad, iOS Programming Community. Join us to learn Swift, Objective-C and build iOS apps!", profileImage: #imageLiteral(resourceName: "brian_voong"))
@@ -55,5 +69,15 @@ class HomeDatasource: Datasource {
         default: return nil
         }
         
+    }
+    
+    func getDummyUsers() -> [User] {
+        let users: [User] = {
+            let jackUser = User(name: "Jack Dorsey", username: "@jack", bioText: "Co-Founder & CEO of Twitter & Square. What will come next?", profileImage: #imageLiteral(resourceName: "jack_dorsey"))
+            let brianUser = User(name: "Brian Voong", username: "@buildthatapp", bioText: "iPhone, iPad, iOS Programming Community. Join us to learn Swift, Objective-C and build iOS apps!", profileImage: #imageLiteral(resourceName: "brian_voong"))
+            
+            return [jackUser, brianUser]
+        }()
+        return users
     }
 }
