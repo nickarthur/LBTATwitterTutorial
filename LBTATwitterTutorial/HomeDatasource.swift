@@ -18,9 +18,12 @@ class HomeDatasource: Datasource, JSONDecodable {
     required init(json: JSON) throws {
         var users = [User]()
         
-        let usersArray = json["users"].array
-        // TO DO: safely unwrap
-        for userJson in usersArray! {
+        guard let usersArray = json["users"].array else {
+            self.users = users
+            return
+        }
+        
+        for userJson in usersArray {
             let name = userJson["name"].stringValue
             let username = userJson["username"].stringValue
             let bio = userJson["bio"].stringValue
