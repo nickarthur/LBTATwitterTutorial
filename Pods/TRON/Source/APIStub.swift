@@ -41,6 +41,8 @@ public extension APIStub {
         if let filePath = bundle.path(forResource: fileName as String, ofType: nil)
         {
             successData = try? Data(contentsOf: URL(fileURLWithPath: filePath))
+        } else {
+            print("Failed to build model from \(fileName) in \(bundle)")
         }
     }
 }
@@ -74,16 +76,16 @@ open class APIStub<Model, ErrorModel> {
     open var loadingError : Error?
     
     /// Response model closure for successful API stub
-    open var modelClosure : ((Void) -> Model?)!
+    open var modelClosure : (() -> Model?)!
     
     /// Error model closure for unsuccessful API stub
-    open var errorClosure: (Void) -> APIError<ErrorModel> = { APIError(request: nil, response: nil, data: nil, error: nil) }
+    open var errorClosure: () -> APIError<ErrorModel> = { APIError(request: nil, response: nil, data: nil, error: nil) }
     
     /// Delay before stub is executed
     open var stubDelay = 0.1
     
     /// Creates `APIStub`, and configures it for `request`.
-    init(request: BaseRequest<Model,ErrorModel>) {
+    public init(request: BaseRequest<Model,ErrorModel>) {
         if let request = request as? APIRequest<Model,ErrorModel>{
             let serializer = request.responseParser
             let errorSerializer = request.errorParser

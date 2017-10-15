@@ -7,7 +7,7 @@ target 'LBTATwitterTutorial' do
 
   # Pods for LBTATwitterTutorial
   pod "LBTAComponents"
-  pod 'TRON', '~> 2.0.0'
+  pod 'TRON'
 
   target 'LBTATwitterTutorialTests' do
     inherit! :search_paths
