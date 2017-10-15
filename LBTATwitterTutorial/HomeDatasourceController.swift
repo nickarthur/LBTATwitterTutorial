@@ -18,15 +18,9 @@ class HomeDatasourceController: DatasourceController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         collectionView?.backgroundColor = .lightBlueBackground
-        
         setupNavigationBarItems()
-        
         fetchHomeFeed()
-        
-//        let homeDatasource = HomeDatasource()
-//        datasource = homeDatasource
     }
     
     let tron = TRON(baseURL: "https://api.letsbuildthatapp.com/")
