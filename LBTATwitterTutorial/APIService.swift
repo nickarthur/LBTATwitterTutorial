@@ -14,11 +14,12 @@ struct APIService {
     
     let tron = TRON(baseURL: "https://api.letsbuildthatapp.com/")
     
-    func fetchHomeFeed(completion: @escaping (HomeDatasource) -> ()) {
+    func fetchHomeFeed(completion: @escaping (HomeDatasource?, Error?) -> ()) {
         let request: APIRequest<HomeDatasource, JSONError> = tron.request("twitter/home")
         request.perform(withSuccess: { homeDatasource in
-            completion(homeDatasource)
+            completion(homeDatasource, nil)
         }) { error in
+            completion(nil, error)
             print("Error fetching JSON: ", error)
         }
     }
