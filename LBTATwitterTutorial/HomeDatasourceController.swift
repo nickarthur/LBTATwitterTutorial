@@ -19,7 +19,7 @@ class HomeDatasourceController: DatasourceController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        collectionView?.backgroundColor = Constants.Colors.lightBlueBackground
+        collectionView?.backgroundColor = .lightBlueBackground
         
         setupNavigationBarItems()
         

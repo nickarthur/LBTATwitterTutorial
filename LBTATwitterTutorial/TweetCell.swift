@@ -83,7 +83,7 @@ class TweetCell: DatasourceCell {
         super.setupViews()
         
         separatorLineView.isHidden = false
-        separatorLineView.backgroundColor = Constants.Colors.separatorLine
+        separatorLineView.backgroundColor = .separatorLine
         
         backgroundColor = .white
         

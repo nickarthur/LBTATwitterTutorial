@@ -72,7 +72,7 @@ class UserCell: DatasourceCell {
         backgroundColor = .white
         
         separatorLineView.isHidden = false
-        separatorLineView.backgroundColor = Constants.Colors.separatorLine
+        separatorLineView.backgroundColor = .separatorLine
         
         addSubview(profileImageView)
         addSubview(nameLabel)
