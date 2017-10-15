@@ -58,7 +58,7 @@ class HomeDatasourceController: DatasourceController {
             
             // Estimate height of cell using bioText height estimation
             let cellMetrics = Constants.Metrics.UserCell.self
-            let attributes = [NSFontAttributeName: cellMetrics.fontBioText]
+            let attributes = [NSAttributedStringKey.font: cellMetrics.fontBioText]
             let approximateHeightTextView = view.frame.width - cellMetrics.userProfileImageSideLength - cellMetrics.leftMargin - cellMetrics.spacingProfileImageAndContent
             let size = CGSize(width: approximateHeightTextView, height: 1000)
             let estimatedFrame = NSString(string: user.bioText).boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: attributes, context: nil)
