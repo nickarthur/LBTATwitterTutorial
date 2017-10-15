@@ -14,21 +14,26 @@ class TweetCell: DatasourceCell {
         didSet {
             guard let tweet = datasourceItem as? Tweet else { return }
             
-            let attributedText = NSMutableAttributedString(string: tweet.user.name,
-                                                           attributes: [NSAttributedStringKey.font : UIFont.boldSystemFont(ofSize: 16)])
+            let attributedText = NSMutableAttributedString(
+                string: tweet.user.name,
+                attributes: [NSAttributedStringKey.font : UIFont.boldSystemFont(ofSize: 16)])
             
             let usernameString = "  \(tweet.user.username)\n"
-            attributedText.append(NSAttributedString(string: usernameString,
-                                                     attributes: [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 15),
-                                                                  NSAttributedStringKey.foregroundColor: UIColor.gray]))
+            attributedText.append(NSAttributedString(
+                string: usernameString,
+                attributes: [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 15),
+                             NSAttributedStringKey.foregroundColor: UIColor.gray]))
             
             // Add spacing below Name and Username line
             let paragraphStyle = NSMutableParagraphStyle()
             paragraphStyle.lineSpacing = 4
             let range = NSMakeRange(0, attributedText.string.characters.count)
-            attributedText.addAttribute(NSAttributedStringKey.paragraphStyle, value: paragraphStyle, range: range)
+            attributedText.addAttribute(NSAttributedStringKey.paragraphStyle,
+                                        value: paragraphStyle, range: range)
             
-            attributedText.append(NSAttributedString(string: tweet.message, attributes: [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 15)]))
+            attributedText.append(
+                NSAttributedString(string: tweet.message,
+                                   attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 15)]))
             
             messageTextView.attributedText = attributedText
         }
