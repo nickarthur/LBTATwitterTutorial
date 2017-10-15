@@ -17,30 +17,18 @@ class HomeDatasource: Datasource, JSONDecodable {
     let tweets: [Tweet]
     
     required init(json: JSON) throws {
-        var users = [User]()
-        
-        if let usersArray = json["users"].array {
-            for userJson in usersArray {
-                let user = User(json: userJson)
-                users.append(user)
-            }
+
+        if let usersJsonArray = json["users"].array {
+            self.users = usersJsonArray.map { User(json: $0) }
+        } else {
+            self.users = [User]()
         }
         
-        var tweets = [Tweet]()
-        if let tweetsArray = json["tweets"].array {
-            for tweetJson in tweetsArray {
-                let userJson = tweetJson["user"]
-                let user = User(json: userJson)
-                
-                let message = tweetJson["message"].stringValue
-                
-                let tweet = Tweet(user: user, message: message)
-                tweets.append(tweet)
-            }
+        if let tweetsJsonArray = json["tweets"].array {
+            self.tweets = tweetsJsonArray.map { Tweet(json: $0) }
+        } else {
+            self.tweets = [Tweet]()
         }
-        
-        self.users = users
-        self.tweets = tweets
     }
     
     override func footerClasses() -> [DatasourceCell.Type]? {
