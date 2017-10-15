@@ -14,33 +14,43 @@ import SwiftyJSON
 class HomeDatasource: Datasource, JSONDecodable {
     
     let users: [User]
+    let tweets: [Tweet]
     
     required init(json: JSON) throws {
         var users = [User]()
         
-        guard let usersArray = json["users"].array else {
-            self.users = users
-            return
+        if let usersArray = json["users"].array {
+            for userJson in usersArray {
+                let name = userJson["name"].stringValue
+                let username = userJson["username"].stringValue
+                let bio = userJson["bio"].stringValue
+                
+                let user = User(name: name, username: username, bioText: bio, profileImage: UIImage())
+                users.append(user)
+            }
         }
         
-        for userJson in usersArray {
-            let name = userJson["name"].stringValue
-            let username = userJson["username"].stringValue
-            let bio = userJson["bio"].stringValue
-            
-            let user = User(name: name, username: username, bioText: bio, profileImage: UIImage())
-            users.append(user)
+        var tweets = [Tweet]()
+        if let tweetsArray = json["tweets"].array {
+            for tweetJson in tweetsArray {
+                let userJson = tweetJson["user"]
+                
+                let name = userJson["name"].stringValue
+                let username = userJson["username"].stringValue
+                let bio = userJson["bio"].stringValue
+                
+                let user = User(name: name, username: username, bioText: bio, profileImage: UIImage())
+                
+                let message = tweetJson["message"].stringValue
+                
+                let tweet = Tweet(user: user, message: message)
+                tweets.append(tweet)
+            }
         }
         
         self.users = users
+        self.tweets = tweets
     }
-    
-    let tweets: [Tweet] = {
-        let brianUser = User(name: "Brian Voong", username: "@buildthatapp", bioText: "iPhone, iPad, iOS Programming Community. Join us to learn Swift, Objective-C and build iOS apps!", profileImage: #imageLiteral(resourceName: "brian_voong"))
-        let tweet = Tweet(user: brianUser, message: "Welcome to episode 9 of the Twitter series. I really hope you guys are enjoying this series so far. I need a really long text block to rend, but let's stop here.")
-        let tweet2 = Tweet(user: brianUser, message: "This is the second tweet of this very short array. In a production app, you wouldn't leave this piece of code here, but since this is a tutorial... Meh!.")
-        return [tweet, tweet2]
-    }()
     
     override func footerClasses() -> [DatasourceCell.Type]? {
         return [UserFooter.self]
