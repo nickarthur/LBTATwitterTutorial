@@ -21,11 +21,7 @@ class HomeDatasource: Datasource, JSONDecodable {
         
         if let usersArray = json["users"].array {
             for userJson in usersArray {
-                let name = userJson["name"].stringValue
-                let username = userJson["username"].stringValue
-                let bio = userJson["bio"].stringValue
-                
-                let user = User(name: name, username: username, bioText: bio, profileImage: UIImage())
+                let user = User(json: userJson)
                 users.append(user)
             }
         }
@@ -34,12 +30,7 @@ class HomeDatasource: Datasource, JSONDecodable {
         if let tweetsArray = json["tweets"].array {
             for tweetJson in tweetsArray {
                 let userJson = tweetJson["user"]
-                
-                let name = userJson["name"].stringValue
-                let username = userJson["username"].stringValue
-                let bio = userJson["bio"].stringValue
-                
-                let user = User(name: name, username: username, bioText: bio, profileImage: UIImage())
+                let user = User(json: userJson)
                 
                 let message = tweetJson["message"].stringValue
                 
@@ -82,15 +73,5 @@ class HomeDatasource: Datasource, JSONDecodable {
         default: return nil
         }
         
-    }
-    
-    func getDummyUsers() -> [User] {
-        let users: [User] = {
-            let jackUser = User(name: "Jack Dorsey", username: "@jack", bioText: "Co-Founder & CEO of Twitter & Square. What will come next?", profileImage: #imageLiteral(resourceName: "jack_dorsey"))
-            let brianUser = User(name: "Brian Voong", username: "@buildthatapp", bioText: "iPhone, iPad, iOS Programming Community. Join us to learn Swift, Objective-C and build iOS apps!", profileImage: #imageLiteral(resourceName: "brian_voong"))
-            
-            return [jackUser, brianUser]
-        }()
-        return users
     }
 }
