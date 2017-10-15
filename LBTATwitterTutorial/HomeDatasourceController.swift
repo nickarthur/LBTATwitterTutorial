@@ -33,6 +33,12 @@ class HomeDatasourceController: DatasourceController {
             if let error = error {
                 print(error)
                 self.errorMessageLabel.isHidden = false
+                if let apiError = error as? APIError<APIService.JSONError> {
+                    if apiError.response?.statusCode != 200 {
+                        self.errorMessageLabel.text = "Error: Status code was not 200\n(Please check your internet connection)"
+                    }
+                }
+                
                 return
             }
             self.errorMessageLabel.isHidden = true
