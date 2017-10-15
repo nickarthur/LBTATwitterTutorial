@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8C7D26F5036B1F61E6A9E966 /* Pods_LBTATwitterTutorialTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8829503CE2CACD928770382B /* Pods_LBTATwitterTutorialTests.framework */; };
+		8F3612BB1F93B901001873D7 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3612BA1F93B901001873D7 /* UIColor+Extension.swift */; };
 		8F4AACA31EFE91EF0036A526 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4AACA21EFE91EF0036A526 /* AppDelegate.swift */; };
 		8F4AACAA1EFE91EF0036A526 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F4AACA91EFE91EF0036A526 /* Assets.xcassets */; };
 		8F4AACAD1EFE91EF0036A526 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F4AACAB1EFE91EF0036A526 /* LaunchScreen.storyboard */; };
@@ -38,6 +39,7 @@
 /* Begin PBXFileReference section */
 		6F6B8C7FEBA5EEF8448D05FC /* Pods-LBTATwitterTutorial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LBTATwitterTutorial.release.xcconfig"; path = "Pods/Target Support Files/Pods-LBTATwitterTutorial/Pods-LBTATwitterTutorial.release.xcconfig"; sourceTree = "<group>"; };
 		8829503CE2CACD928770382B /* Pods_LBTATwitterTutorialTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LBTATwitterTutorialTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F3612BA1F93B901001873D7 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		8F4AAC9F1EFE91EF0036A526 /* LBTATwitterTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LBTATwitterTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F4AACA21EFE91EF0036A526 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F4AACA91EFE91EF0036A526 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -83,6 +85,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8F3612B71F93B8A4001873D7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8F3612BA1F93B901001873D7 /* UIColor+Extension.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		8F3612B81F93B8D2001873D7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8F4AACAB1EFE91EF0036A526 /* LaunchScreen.storyboard */,
+				8F4AACA91EFE91EF0036A526 /* Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		8F3612B91F93B8D7001873D7 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				8F4AACAE1EFE91EF0036A526 /* Info.plist */,
+			);
+			name = "Supporting files";
+			sourceTree = "<group>";
+		};
 		8F4AAC961EFE91EF0036A526 = {
 			isa = PBXGroup;
 			children = (
@@ -107,15 +134,14 @@
 		8F4AACA11EFE91EF0036A526 /* LBTATwitterTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				8F4AACA21EFE91EF0036A526 /* AppDelegate.swift */,
 				8FE5C5011F04232E001675D1 /* Constants.swift */,
 				8F9997011EFFADD400FFAF8E /* Model */,
 				8F9997021EFFADD800FFAF8E /* View */,
 				8F9997001EFFADCD00FFAF8E /* Controller */,
-				8F4AACA21EFE91EF0036A526 /* AppDelegate.swift */,
-				8F9996FC1EFEAE7100FFAF8E /* HomeController.swift */,
-				8F4AACA91EFE91EF0036A526 /* Assets.xcassets */,
-				8F4AACAB1EFE91EF0036A526 /* LaunchScreen.storyboard */,
-				8F4AACAE1EFE91EF0036A526 /* Info.plist */,
+				8F3612B71F93B8A4001873D7 /* Extensions */,
+				8F3612B91F93B8D7001873D7 /* Supporting files */,
+				8F3612B81F93B8D2001873D7 /* Resources */,
 			);
 			path = LBTATwitterTutorial;
 			sourceTree = "<group>";
@@ -132,6 +158,7 @@
 		8F9997001EFFADCD00FFAF8E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8F9996FC1EFEAE7100FFAF8E /* HomeController.swift */,
 				8F9996FE1EFFA66300FFAF8E /* HomeDatasourceController.swift */,
 				8FE5C5031F042F19001675D1 /* HomeDatasourceController+NavBar.swift */,
 			);
@@ -386,6 +413,7 @@
 				8F9996FD1EFEAE7100FFAF8E /* HomeController.swift in Sources */,
 				8F9996FF1EFFA66300FFAF8E /* HomeDatasourceController.swift in Sources */,
 				8FE5C5081F04C95D001675D1 /* Tweet.swift in Sources */,
+				8F3612BB1F93B901001873D7 /* UIColor+Extension.swift in Sources */,
 				8FE5C5041F042F19001675D1 /* HomeDatasourceController+NavBar.swift in Sources */,
 				8FE5C5061F04484E001675D1 /* TweetCell.swift in Sources */,
 				8F99970A1EFFEBAF00FFAF8E /* UserCell.swift in Sources */,
