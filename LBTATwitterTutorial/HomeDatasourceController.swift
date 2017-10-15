@@ -20,25 +20,8 @@ class HomeDatasourceController: DatasourceController {
         super.viewDidLoad()
         collectionView?.backgroundColor = .lightBlueBackground
         setupNavigationBarItems()
-        fetchHomeFeed()
-    }
-    
-    let tron = TRON(baseURL: "https://api.letsbuildthatapp.com/")
-    
-    class JSONError: JSONDecodable {
-        required init(json: JSON) throws {
-            print("JSON Error")
-        }
-    }
-    
-    fileprivate func fetchHomeFeed() {
-        let request: APIRequest<HomeDatasource, JSONError> = tron.request("twitter/home")
-        request.perform(withSuccess: { homeDatasource in
-            print("Successfully fetched our JSON object")
-            print(homeDatasource.users.count)
-            self.datasource = homeDatasource
-        }) { error in
-            print("Error fetching our JSON:", error)
+        APIService.shared.fetchHomeFeed { homeDataSource in
+            self.datasource = homeDataSource
         }
     }
     
