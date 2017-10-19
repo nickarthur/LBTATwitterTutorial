@@ -60,24 +60,40 @@ class HomeDatasourceController: DatasourceController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        if let user = datasource?.item(indexPath) as? User {
-            print(user.bioText)
+        
+        // User section
+        if indexPath.section == 0 {
+            if let user = datasource?.item(indexPath) as? User {
+                
+                let cellHeight = estimatedHeight(forText: user.bioText)
+                return CGSize(width: view.frame.width, height: cellHeight)
+            }
+        
+            // Tweets section
+        } else if indexPath.section == 1 {
             
-            // Estimate height of cell using bioText height estimation
-            let cellMetrics = Constants.Metrics.UserCell.self
-            let attributes = [NSAttributedStringKey.font: cellMetrics.fontBioText]
-            let approximateHeightTextView = view.frame.width - cellMetrics.userProfileImageSideLength - cellMetrics.leftMargin - cellMetrics.spacingProfileImageAndContent
-            let size = CGSize(width: approximateHeightTextView, height: 1000)
-            let estimatedFrame = NSString(string: user.bioText).boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: attributes, context: nil)
+            guard let tweet = datasource?.item(indexPath) as? Tweet else {
+                return .zero
+            }
             
-            let additionalHeightNecessary: CGFloat = 14
-            let cellHeight = cellMetrics.topMargin + cellMetrics.heightNameLabel + cellMetrics.heightUsernameLabel + estimatedFrame.height + additionalHeightNecessary
-            
+            let cellHeight = estimatedHeight(forText: tweet.message)
             return CGSize(width: view.frame.width, height: cellHeight)
         }
         
+        return .zero
+    }
+    
+    private func estimatedHeight(forText text: String) -> CGFloat {
+        let cellMetrics = Constants.Metrics.UserCell.self
+        let attributes = [NSAttributedStringKey.font: cellMetrics.fontBioText]
+        let approximateHeightTextView = view.frame.width - cellMetrics.userProfileImageSideLength - cellMetrics.leftMargin - cellMetrics.spacingProfileImageAndContent
+        let size = CGSize(width: approximateHeightTextView, height: 1000)
+        let estimatedFrame = NSString(string: text).boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: attributes, context: nil)
         
-        return CGSize(width: view.frame.width, height: 200)
+        let additionalHeightNecessary: CGFloat = 20
+        let cellHeight = cellMetrics.topMargin + cellMetrics.heightNameLabel + cellMetrics.heightUsernameLabel + estimatedFrame.height + additionalHeightNecessary
+        
+        return cellHeight
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
