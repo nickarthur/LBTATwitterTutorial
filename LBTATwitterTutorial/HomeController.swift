@@ -8,34 +8,6 @@
 
 import UIKit
 
-class WordCell: UICollectionViewCell {
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupViews()
-    }
-    
-    let wordLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Test"
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
-    func setupViews() {
-        backgroundColor = .yellow
-        
-        addSubview(wordLabel)
-        wordLabel.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        wordLabel.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
-        wordLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
-        wordLabel.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-}
-
 class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     let cellId = "cellId"
@@ -46,7 +18,6 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         super.viewDidLoad()
         collectionView?.backgroundColor = .white
         collectionView?.alwaysBounceVertical = true
-        collectionView?.register(WordCell.self, forCellWithReuseIdentifier: cellId)
         collectionView?.register(UICollectionViewCell.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId)
         collectionView?.register(UICollectionViewCell.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: footerId)
     }
