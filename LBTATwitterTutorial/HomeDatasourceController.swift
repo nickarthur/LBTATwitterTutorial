@@ -63,15 +63,15 @@ class HomeDatasourceController: DatasourceController {
         
         // User section
         if indexPath.section == 0 {
-            if let user = datasource?.item(indexPath) as? User {
-                
-                let cellHeight = estimatedHeight(forText: user.bioText)
-                return CGSize(width: view.frame.width, height: cellHeight)
+            guard let user = datasource?.item(indexPath) as? User else {
+                return .zero
             }
-        
+            
+            let cellHeight = estimatedHeight(forText: user.bioText)
+            return CGSize(width: view.frame.width, height: cellHeight)
+            
             // Tweets section
         } else if indexPath.section == 1 {
-            
             guard let tweet = datasource?.item(indexPath) as? Tweet else {
                 return .zero
             }
